@@ -1,5 +1,6 @@
 package dev.maria;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EstacionPeajes {
@@ -8,5 +9,65 @@ public class EstacionPeajes {
     private String ciudad;
     private double totalPeajes;
     List<Vehiculo> vehiculos;
+
+    public EstacionPeajes(String ciudad, int id, String nombre, double totalPeajes, List<Vehiculo> vehiculos) {
+        this.ciudad = ciudad;
+        this.id = id;
+        this.nombre = nombre;
+        this.totalPeajes = totalPeajes;
+        this.vehiculos = new ArrayList<>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public double getTotalPeajes() {
+        return totalPeajes;
+    }
+
+    public void setTotalPeajes(double totalPeajes) {
+        this.totalPeajes = totalPeajes;
+    }
+
+    public List<Vehiculo> getVehiculos() {
+        return vehiculos;
+    }
+
+    public void setVehiculos(List<Vehiculo> vehiculos) {
+        this.vehiculos = vehiculos;
+    }
+
+    public void cobrarPeaje(Vehiculo vehiculo) {
+        double peaje = vehiculo.calcularPeaje();
+        totalPeajes += peaje;
+        vehiculos.add(vehiculo);
+    }
+
+    public void imprimirImporte(){
+        System.out.println("estacion");
+    }
+
+
 
 }
