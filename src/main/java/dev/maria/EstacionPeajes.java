@@ -61,10 +61,11 @@ public class EstacionPeajes {
         this.vehiculos = vehiculos;
     }
 
-    public void cobrarPeaje(Vehiculo vehiculo) {
+    public double cobrarPeaje(Vehiculo vehiculo) {
         double peaje = vehiculo.calcularPeaje();
         totalPeajes += peaje;
         vehiculos.add(vehiculo);
+        return totalPeajes;
     }
 
     public void imprimirImporte(){
