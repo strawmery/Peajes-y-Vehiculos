@@ -3,6 +3,9 @@ package dev.maria;
 abstract class Vehiculo {
     private String placa;
 
+    public Vehiculo(){
+    }
+
     public Vehiculo(String placa) {
         this.placa = placa;
     }
@@ -16,6 +19,4 @@ abstract class Vehiculo {
     }
 
     public abstract double calcularPeaje();
-
-
 }

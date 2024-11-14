@@ -1,6 +1,9 @@
 package dev.maria;
 
 public class Coche extends Vehiculo {
+
+    public Coche(){
+    }
     
     public Coche(String placa) {
         super(placa);

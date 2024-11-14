@@ -2,6 +2,9 @@ package dev.maria;
 
 public class Moto extends Vehiculo {
 
+    public Moto(){
+    }
+
     public Moto(String placa) {
         super(placa);
     }

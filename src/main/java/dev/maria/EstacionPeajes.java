@@ -10,10 +10,13 @@ public class EstacionPeajes {
     private double totalPeajes;
     List<Vehiculo> vehiculos;
 
-    public EstacionPeajes(String ciudad, int id, String nombre, double totalPeajes, List<Vehiculo> vehiculos) {
-        this.ciudad = ciudad;
+    public EstacionPeajes(){
+    }
+
+    public EstacionPeajes( int id, String nombre,String ciudad, double totalPeajes) {
         this.id = id;
         this.nombre = nombre;
+        this.ciudad = ciudad;
         this.totalPeajes = totalPeajes;
         this.vehiculos = new ArrayList<>();
     }
@@ -65,7 +68,11 @@ public class EstacionPeajes {
     }
 
     public void imprimirImporte(){
-        System.out.println("estacion");
+        System.out.println("estacion"+ nombre + "ciudad:"+ ciudad);
+        for(Vehiculo v : vehiculos){
+            System.out.println("Vehiculo"+ v.getPlaca() +"Peaje: "+ v.calcularPeaje());
+        }
+        System.out.println("Total peajes: "+ totalPeajes);
     }
 
 

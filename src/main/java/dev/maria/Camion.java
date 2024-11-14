@@ -2,6 +2,9 @@ package dev.maria;
 
 public class Camion extends Vehiculo {
     private int ejes;
+
+    public Camion(){
+    }
     
     public Camion(String placa, int ejes) {
         super(placa);
